@@ -1,0 +1,201 @@
+folders
+-----------
+
+1. man -> manual
+2. pwd -> print name of current working directory
+3. cd -> change directory
+
+4. ls -> list contents of current working directory
+	any file or folder with . infront of the name is designated as hidden file
+	
+	`ls -a` <= shows hidden files
+	`ls -l` <= gives whole lot info about directories
+	`ls -lah` <= all options combined (h converts bytes to kb, mb etc.)
+
+5. mkdir "Some dir" 
+	if it worked successfully -> nothing will be shown
+	`mkdir -p WSL/Ubuntu/Ahroo` <= create nested directories
+
+6. rmdir -> remove directory one at a time. if child dirs present it throws error
+	`rmdir -p Ubuntu/` must give full path to work
+
+
+
+files
+------------
+
+1. file -> file movies.txt <= gives details about the file
+
+2. touch -> create empty files
+	`touch a.txt b.txt` <= can create more than 1 file at a time
+
+3. `rm -i file1.txt file2.txt` -> interactive mode, verify each of these file
+
+4. `rm -rf WSL/` -> remove directories
+
+5. `cp file1.txt filecp.txt` -> copy source file and new file name
+
+6. `mv file3.txt ./test/` -> move files
+	`mv test testnew` can use mv to rename
+
+
+working with file content
+-------------------------------
+
+1. `head -5 file3.txt` -> shows first 5 lines of a file
+
+2. `tail file3.txt` -> shows last 10 lines of file
+
+3. echo -> 
+
+	`echo "This is a kind person" > file1.txt`
+	
+	creates a file and writes the string on it
+
+3. cat -> print all the content of file, concatenate multiple files
+
+	`cat file2.txt file3.txt` -> shows content of both files onto terminal together
+
+	`cat file2.txt file3.txt > all.txt` -> copied content of both files into target file
+
+	`cat > somefile.txt` -> create a file and let you write sentences onto it -> press ctrl+d to save
+
+	`cat file1.txt > otherfile.txt` -> use cat to copy files
+
+4. more -> viewing large files page by page
+
+	`more file2.txt`
+
+5. less <- opposite of more
+	
+	use q to quit after viewing
+
+
+
+Linux file structure
+--------------------------
+
+1. bin -> All binaries, commands are stored here
+
+2. boot -> All files needed for linux to boot are stored here including `grub`
+
+3. dev -> All physical devices are mounted here include hdd, ssd, cd drives etc. (cdrom folder also can hold cd drives but it depends on distributor) 
+
+4. etc -> All configuration files are stored -> All application files are installed
+
+5. home -> all user name folders are stored. for ex: /home/ahroo, /home/gtn 
+
+6. lib -> when packages are downloaded, they end up here
+
+7. media -> another place where external devices connect such as usb
+
+8. mnt -> another place for mounting external drives or shared drive or servers
+
+9. opt -> for optional software for system
+
+10. proc -> process folder
+
+11. root -> different from actual root (/) directory
+		if you log with root account those account details are stored here
+
+12. run -> lot of drives are automounted such as usb. makes linus more suitable for gui
+
+13. sbin -> dedicated to certain commands which can only be invoked by root user
+
+14. tmp -> stores temporary files
+
+15. snap -> modern snap applications are stored here
+
+16. var -> where variable data is kept such as server files such as apache log files etc.
+
+
+
+
+system information commands
+---------------------------------------
+
+1. uptime -> gives time system is up, # of users
+
+2. free -> displays amt of free memory
+
+3. ps -A -> snapshot of processes
+
+4. df -h -> gives file system info at human readable format
+
+5. sudo fdisk -l -> gives info about partitions
+
+6. lsblk -> shows boot locations, mount point etc
+
+7. top -> displays linux processes (important) (press q to quit)
+
+8. htop -> same as top but more cleaner
+
+
+Networking 
+-----------------------------
+
+1. ifconfig -> show ip of pc
+
+2. ip a -> show ip but cleaner
+
+
+
+
+Text editor
+----------------------------
+
+1. nano -> a small text editor
+
+2. vim
+	insert letters -> i
+	write to file -> esc :w 
+	quit -> :q
+	quit without saving -> :q!
+
+
+
+other commands
+-------------------
+
+1. whoami
+
+2. whereis python -> gives location of program
+
+
+
+reading permission
+---------------------
+
+drwxr-xr-x 10 lco staff
+
+d -> directory
+rwx -> for creator of file
+r-x -> for group
+r-x -> for rest of the people who are logged in
+
+
+execute	x - 1
+write		w - 2
+read		r - 4
+
+chmod 755 filename
+
+chmod -> change permission
+
+7 -> 1+2+4 = xwr
+
+755 -> 3 types of people -> creator, group, other
+7 -> creator has complete acccess
+5 -> others have execute and read access (1+4=5)
+
+
+
+
+
+
+
+
+
+
+
+
