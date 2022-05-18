@@ -34,9 +34,15 @@ files
 4. `rm -rf WSL/` -> remove directories
 
 5. `cp file1.txt filecp.txt` -> copy source file and new file name
+        `cp -R <source_folder> <destination_folder>` -> execute the “cp” command with the “-R” option for recursive
+                                                        and specify the source and destination directories to be copied.
+
+        `cp -R /etc/* /etc_backup` -> copy all inner content
+
+        cp /path/to/source.txt . -> copy to current directory (. -> current directory)
 
 6. `mv file3.txt ./test/` -> move files
-	`mv test testnew` can use mv to rename
+	`mv test testnew` can use mv to RENAME
 
 
 working with file content
@@ -48,9 +54,9 @@ working with file content
 
 3. echo -> 
 
-	`echo "This is a kind person" > file1.txt`
-	
-	creates a file and writes the string on it
+	`echo "This is a kind person" > file1.txt` -> creates a file and writes the string on it
+
+	`echo 'text here' >> filename.txt` -> append to a file name
 
 3. cat -> print all the content of file, concatenate multiple files
 
@@ -60,7 +66,7 @@ working with file content
 
 	`cat > somefile.txt` -> create a file and let you write sentences onto it -> press ctrl+d to save
 
-	`cat file1.txt > otherfile.txt` -> use cat to copy files
+	`cat file1.txt > otherfile.txt` -> use cat to COPY files
 
 4. more -> viewing large files page by page
 
@@ -69,6 +75,9 @@ working with file content
 5. less <- opposite of more
 	
 	use q to quit after viewing
+
+6. source -> runs linux scripts
+    `source ~/.bashrc`
 
 
 
@@ -116,7 +125,7 @@ system information commands
 
 1. uptime -> gives time system is up, # of users
 
-2. free -> displays amt of free memory
+2. `free -h` -> displays amt of free memory
 
 3. ps -A -> snapshot of processes
 
@@ -157,9 +166,11 @@ Text editor
 other commands
 -------------------
 
-1. whoami
+1. `whoami`
 
-2. whereis python -> gives location of program
+2. `whereis python` -> gives location of program
+
+4. `readlink -f $(which java)`
 
 
 
