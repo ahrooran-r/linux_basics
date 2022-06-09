@@ -17,7 +17,8 @@ folders
 	`mkdir -p WSL/Ubuntu/Ahroo` <= create nested directories
 
 6. rmdir -> remove directory one at a time. if child dirs present it throws error
-	`rmdir -p Ubuntu/` must give full path to work
+	`rmdir -p ahroo/notes/semi7` <- must give full path to work
+	BETTER command -> look in files: 4th command, 3rd command
 
 
 
@@ -29,7 +30,7 @@ files
 2. touch -> create empty files
 	`touch a.txt b.txt` <= can create more than 1 file at a time
 
-3. `rm -i file1.txt file2.txt` -> interactive mode, verify each of these file
+3. `rm -i file1.txt file2.txt` -> for files: interactive mode, verify each of these file
 
 4. `rm -rf WSL/` -> remove directories
 
@@ -43,6 +44,18 @@ files
 
 6. `mv file3.txt ./test/` -> move files
 	`mv test testnew` can use mv to RENAME
+
+7. `du -sh file_path`
+
+   du (disc usage) command estimates file_path space usage
+   The options -sh are (from man du):
+
+     -s, --summarize
+            display only a total for each argument
+
+     -h, --human-readable
+
+   https://unix.stackexchange.com/questions/185764/how-do-i-get-the-size-of-a-directory-on-the-command-line
 
 
 working with file content
@@ -198,15 +211,4 @@ chmod -> change permission
 755 -> 3 types of people -> creator, group, other
 7 -> creator has complete acccess
 5 -> others have execute and read access (1+4=5)
-
-
-
-
-
-
-
-
-
-
-
 
