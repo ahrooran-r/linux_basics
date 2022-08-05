@@ -25,7 +25,7 @@ folders
 files
 ------------
 
-1. file -> file movies.txt <= gives details about the file
+1. file -> file movies.txt <- gives details about the file
 
 2. touch -> create empty files
 	`touch a.txt b.txt` <= can create more than 1 file at a time
@@ -212,3 +212,11 @@ chmod -> change permission
 7 -> creator has complete acccess
 5 -> others have execute and read access (1+4=5)
 
+working with processes
+-------------------------
+
+netstat -tunlp <- get working ports
+
+`ps aux | grep COMPONENT_NAME` <- give process id addociated with COMPONENT_NAME
+
+kill -9 ID <- kills the process
